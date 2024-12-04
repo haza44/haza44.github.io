@@ -1,67 +1,200 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acak Angka dengan Tanggal</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
 
-    <title>Narrow Jumbotron Template for Bootstrap</title>
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        gap: 20px;
+    }
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../css/editor.css" rel="stylesheet">
+    .info, .main {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-    <!-- Custom styles for this template -->
-    <link href="narrow-jumbotron.css" rel="stylesheet">
-  </head>
+    .info {
+        flex: 1;
+    }
 
-  <body>
+    .main {
+        flex: 2;
+    }
 
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input, button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+    }
+
+    button:hover:not(:disabled) {
+        background-color: #0056b3;
+    }
+
+    .hasil {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+        background: #f9f9f9;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        white-space: pre-wrap;
+        height: 150px;
+        overflow-y: auto;
+    }
+
+    .highlight {
+        background-color: yellow;
+        font-weight: bold;
+        color: red;
+    }
+</style>
+</head>
+<body>
     <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted"><i><b>MY SWEAT BLOG</b></i></h3>
-      </div>
-
-      <div class="jumbotron">
-        <h1 class="display-3">SELAMAT DATANG</h1>
-        <p class="lead">Selagi masih disini nikmati semua fitur website kami, jika tertarik nanti anda tahu harus kemana menghubungi kami, untuk mempertegas silakan klik menu Contact Pojok Kanan Atas, Trims</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4><h3 class="elementor-post__title" style="margin-right: 0px; margin-bottom: 25px; margin-left: 0px; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; line-height: 1.4; vertical-align: baseline; font-family: var( --e-global-typography-primary-font-family ),Sans-serif; font-size: 21px; font-weight: var(--e-global-typography-primary-font-weight);"><a href="https://ftmm.unair.ac.id/magang-di-pjb-up-cirata-mahasiswa-ftmm-pelajari-sistem-dan-desain-pembangkit-listrik-energi-baru-terbarukan/" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-variant: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; font-family: var( --e-global-typography-primary-font-family ),Sans-serif; font-style: inherit; font-weight: var(--e-global-typography-primary-font-weight); color: var(--e-global-color-secondary); transition: all 0.3s ease 0s; box-shadow: none;">Magang di PJB UP CIRATA, Mahasiswa FTMM Pelajari Sistem dan Desain Pembangkit Listrik Energi Baru Terbarukan</a></h3></h4>
-          <p><h3 class="elementor-post__title" style="margin-right: 0px; margin-bottom: 25px; margin-left: 0px; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; line-height: 1.4; vertical-align: baseline; font-family: var( --e-global-typography-primary-font-family ),Sans-serif; font-size: 21px; font-weight: var(--e-global-typography-primary-font-weight);"><span style="color: rgb(119, 119, 119); font-family: Roboto, sans-serif; font-size: 14px;"><i style="line-height: 24px;">FTMM NEWS – Sejumlah mahasiswa Fakultas Teknologi Maju dan Multidisiplin UNAIR angkatan 2020 kini tengah mengikuti program magang di salah satu anak perusahaan PLN. Yakni Pembangkit Jawa Bali (PJB) Cirata.</i></span><br></h3></p>
-
-          <h4><h3 class="elementor-post__title" style="margin-right: 0px; margin-bottom: 25px; margin-left: 0px; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; line-height: 1.4; vertical-align: baseline; font-family: var( --e-global-typography-primary-font-family ),Sans-serif; font-size: 21px; font-weight: var(--e-global-typography-primary-font-weight);"><a href="https://ftmm.unair.ac.id/melalui-riset-dan-karya-ftmm-siap-berkontribusi-untuk-bangsa/" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-variant: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; font-family: var( --e-global-typography-primary-font-family ),Sans-serif; font-style: inherit; font-weight: var(--e-global-typography-primary-font-weight); color: var(--e-global-color-secondary); transition: all 0.3s ease 0s; box-shadow: none;">Melalui Riset dan Karya, FTMM Siap Berkontribusi untuk Bangsa</a></h3></h4>
-          <p><span style="color: rgb(119, 119, 119); font-family: Roboto, sans-serif; font-size: 14px;"><i>FTMM NEWS – Keberlangsungan zaman dari waktu ke waktu selalu mengalami fase revolusi. Baik dari sistem kemasyarakatan maupun teknologi yang diterapkan. Fenomena ini tercermin dari hadirnya patokan Revolusi Industri pertama</i></span></p>
-
-          <h4><h3 class="elementor-post__title" style="margin-right: 0px; margin-bottom: 25px; margin-left: 0px; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; line-height: 1.4; vertical-align: baseline; font-family: var( --e-global-typography-primary-font-family ),Sans-serif; font-size: 21px; font-weight: var(--e-global-typography-primary-font-weight);"><a href="https://ftmm.unair.ac.id/wakil-dekan-ii-ftmm-angkat-bicara-perihal-fenomena-bombastisnya-nft-ghozali-everyday/" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-variant: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; font-family: var( --e-global-typography-primary-font-family ),Sans-serif; font-style: inherit; font-weight: var(--e-global-typography-primary-font-weight); color: var(--e-global-color-secondary); transition: all 0.3s ease 0s; box-shadow: none;">Wakil Dekan II FTMM Angkat Bicara Perihal Fenomena Bombastisnya NFT Ghozali Everyday</a></h3></h4>
-          <p><span style="color: rgb(119, 119, 119); font-family: Roboto, sans-serif; font-size: 14px;"><i>FTMM NEWS – Belakangan, nama Ghozali Everyday hangat menjadi perbincangan&nbsp; di masyarakat. Pasalnya, pemuda 22 tahun itu berhasil menjual ratusan swafotonya dalam wujud aset digital non-fungible&nbsp;token (NFT) dengan nilai jual</i></span></p>
+        <div class="info">
+            <h2>Informasi Penggunaan</h2>
+            <p>1. Masukkan angka (10 digit) untuk diacak.</p>
+            <p>2. Pilih tanggal untuk memengaruhi hasil acak.</p>
+            <p>3. Pilih jumlah kali angka diacak.</p>
+            <p>4. Tekan tombol "Acak" untuk melihat hasil.</p>
+            <p>5. Gunakan kolom pencarian untuk menyorot angka yang sesuai.</p>
         </div>
+        <div class="main">
+            <h1>Alat Bantu Acak Angka</h1>
+            <label for="inputAngka">Masukkan 10 Angka:</label>
+            <input type="text" id="inputAngka" placeholder="Contoh: 1234567890" maxlength="10" oninput="resetButton()">
 
-        
-      </div>
+            <label for="inputTanggal">Pilih Tanggal:</label>
+            <input type="date" id="inputTanggal" oninput="resetButton()">
+            
+            <label for="inputJumlahAcak">Masukkan Jumlah Kali Acak:</label>
+            <input type="number" id="inputJumlahAcak" min="1" value="1" oninput="resetButton()">
+            
+            <button id="acakButton" onclick="acakAngka()">Acak</button>
+            
+            <label for="inputCariAngka">Cari Angka:</label>
+            <input type="text" id="inputCariAngka" placeholder="Masukkan angka untuk mencari" oninput="cariAngka()">
+            
+            <div id="hasilAcak" class="hasil"></div>
+            <div id="hasilCari" class="hasil"></div>
+        </div>
+    </div>
 
-      <footer class="footer">
-        <p>© Company 2017</p>
-      </footer>
+    <script>
+        let hasilAcakArray = [];
 
-    </div> <!-- /container -->
-  
+        function acakAngka() {
+            const inputAngka = document.getElementById('inputAngka').value;
+            const inputTanggal = document.getElementById('inputTanggal').value;
+            const jumlahAcak = parseInt(document.getElementById('inputJumlahAcak').value);
+            const acakButton = document.getElementById('acakButton');
+            hasilAcakArray = []; // Reset hasil
 
+            if (inputAngka.length !== 10 || !inputTanggal || isNaN(jumlahAcak)) {
+                alert("Masukkan angka 10 digit, tanggal yang valid, dan jumlah kali acak yang valid.");
+                return;
+            }
+
+            const seed = generateSeed(inputTanggal);
+
+            for (let i = 0; i < jumlahAcak; i++) {
+                const angkaAcak = shuffleWithSeed(inputAngka, seed + i).slice(0, 4); // Mengambil 4 angka acak
+                hasilAcakArray.push(angkaAcak);
+            }
+
+            tampilkanHasil(); // Tampilkan hasil
+            acakButton.disabled = true; // Nonaktifkan tombol setelah diacak
+        }
+
+        function generateSeed(date) {
+            return date.split('-').join(''); // Menggunakan tanggal sebagai seed (yyyyMMdd)
+        }
+
+        function shuffleWithSeed(string, seed) {
+            const array = string.split('');
+            let pseudoRandom = parseInt(seed);
+            for (let i = array.length - 1; i > 0; i--) {
+                pseudoRandom = (pseudoRandom * 9301 + 49297) % 233280; // Linear congruential generator
+                const j = pseudoRandom % (i + 1);
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array.join('');
+        }
+
+        function tampilkanHasil() {
+            const hasilDiv = document.getElementById('hasilAcak');
+            hasilDiv.innerHTML = hasilAcakArray.join(', ');
+        }
+
+        function cariAngka() {
+            const query = document.getElementById('inputCariAngka').value;
+            const hasilDiv = document.getElementById('hasilAcak');
+            const cariDiv = document.getElementById('hasilCari');
+
+            if (!query) {
+                tampilkanHasil(); // Reset highlight jika tidak ada query
+                cariDiv.innerHTML = ''; // Reset hasil pencarian
+                return;
+            }
+
+            const regex = new RegExp(`(${query})`, 'g');
+            const highlightedHasil = hasilAcakArray.map(angka => 
+                angka.replace(regex, '<span class="highlight">$1</span>')
+            ).join(', ');
+
+            const hasilPencarian = hasilAcakArray.filter(angka => angka.includes(query));
+
+            hasilDiv.innerHTML = highlightedHasil;
+            cariDiv.innerHTML = `Jumlah Angka Ditemukan: ${hasilPencarian.length}<br>` + 
+                                `Angka: ${hasilPencarian.join(', ')}`;
+        }
+
+        function resetButton() {
+            document.getElementById('acakButton').disabled = false; // Aktifkan tombol jika input berubah
+        }
+    </script>
 </body>
 </html>
